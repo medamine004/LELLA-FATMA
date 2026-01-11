@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppléments - The One Coffee</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background-color: #FFFFFF;
+            color: #222;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 35px 20px 25px;
+        }
+
+        .logo-container img {
+            width: 260px;
+            max-width: 80vw;
+            border-radius: 50%;
+            border: 5px solid #E53935;
+        }
+
+        .category-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.6rem, 7vw, 4.2rem);
+            color: #E53935;
+            margin: 15px 0 35px;
+        }
+
+        .category-title::after {
+            content: '';
+            display: block;
+            width: 130px;
+            height: 5px;
+            background: #E53935;
+            margin: 18px auto 0;
+            border-radius: 3px;
+        }
+
+        /* Hero Image - Version plus petite */
+        .hero-image-container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            border: 5px solid #E53935;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+        }
+
+        .hero-image-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+            z-index: 1;
+            border-radius: 16px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .cafe-menu {
+            max-width: 1100px;
+            margin: 0 auto 90px;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 22px;
+        }
+
+        .cafe-item {
+            background: white;
+            border: 2px solid #E53935;
+            border-radius: 12px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(229,57,53,0.08);
+        }
+
+        .cafe-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 24px rgba(229,57,53,0.18);
+        }
+
+        .cafe-item img {
+            width: 78px;
+            height: 78px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #E53935;
+            flex-shrink: 0;
+        }
+
+        .cafe-details { flex: 1; }
+
+        .cafe-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .cafe-header i {
+            font-size: 1.8rem;
+            color: #E53935;
+        }
+
+        .cafe-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .cafe-sizes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px 26px;
+            font-size: 1.05rem;
+            color: #444;
+        }
+
+        .cafe-sizes span {
+            white-space: nowrap;
+        }
+
+        .cafe-sizes strong {
+            color: #E53935;
+            font-weight: 700;
+            font-size: 1.18rem;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 50px 20px 90px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: #E53935;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #c62828;
+            transform: translateY(-4px);
+        }
+
+        .site-footer {
+            background-color: #111;
+            color: #ddd;
+            padding: 80px 20px 60px;
+            text-align: center;
+            border-top: 6px solid #E53935;
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .footer-text { font-size: 1.3rem; font-weight: 300; }
+
+        .footer-phone a {
+            color: #E53935;
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .social-links a {
+            color: #ccc;
+            font-size: 2.6rem;
+            margin: 0 14px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover { color: #E53935; }
+
+        @media (max-width: 768px) {
+            .cafe-menu { grid-template-columns: 1fr; }
+            .cafe-item img { width: 70px; height: 70px; }
+            .cafe-name { font-size: 1.45rem; }
+            .hero-image-container {
+                max-width: 92%;
+                margin: 0 auto 30px;
+            }
+            .hero-image {
+                height: 120px;
+            }
+        }
+        @media (max-width: 480px) {
+
+    .logo-container img {
+        width: 180px;
+    }
+
+    .category-title {
+        font-size: 2.1rem;
+        margin: 15px 0 35px;
+    }
+
+    .hero-image {
+        height: 110px;
+    }
+
+    .cafe-menu {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 10px;
+    }
+
+    .cafe-item {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .cafe-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cafe-name {
+        font-size: 1.2rem;
+    }
+
+    .cafe-sizes {
+        font-size: 1rem;
+    }
+
+    .nav-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+        font-size: 1.05rem;
+    }
+
+    .footer-text {
+        font-size: 1.05rem;
+    }
+
+    .footer-phone a {
+        font-size: 1.5rem;
+    }
+
+    .social-links a {
+        font-size: 2rem;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="image/lella fatma.jpg" alt="The One Coffee Logo">
+    </div>
+
+    <h1 class="category-title">Suppléments</h1>
+
+    <div class="hero-image-container">
+        <img src="image/supplement frit.jpg" alt="Suppléments gourmands" class="hero-image">
+    </div>
+
+    <div class="cafe-menu">
+
+        <div class="cafe-item">
+            <img src="image/supplement frit.jpg" alt="Frites">
+            <div class="cafe-details">
+                <div class="cafe-header">
+                    <i class="fas fa-fire"></i>
+                    <div class="cafe-name">Frites</div>
+                </div>
+                <div class="cafe-sizes">
+                    <span><strong>2.0 DT</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cafe-item">
+            <img src="image/supplement scalope.jpg" alt="Escalope">
+            <div class="cafe-details">
+                <div class="cafe-header">
+                    <i class="fas fa-bacon"></i>
+                    <div class="cafe-name">Escalope</div>
+                </div>
+                <div class="cafe-sizes">
+                    <span><strong>3.5 DT</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cafe-item">
+            <img src="image/supplement chawarma.jpg" alt="Chawarma">
+            <div class="cafe-details">
+                <div class="cafe-header">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <div class="cafe-name">Chawarma</div>
+                </div>
+                <div class="cafe-sizes">
+                    <span><strong>3.5 DT</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cafe-item">
+            <img src="image/supplement jombon.jpg" alt="Jambon">
+            <div class="cafe-details">
+                <div class="cafe-header">
+                    <i class="fas fa-bacon"></i>
+                    <div class="cafe-name">Jambon</div>
+                </div>
+                <div class="cafe-sizes">
+                    <span><strong>2.0 DT</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cafe-item">
+            <img src="image/supplement thon.jpg" alt="Thon">
+            <div class="cafe-details">
+                <div class="cafe-header">
+                    <i class="fas fa-fish"></i>
+                    <div class="cafe-name">Thon</div>
+                </div>
+                <div class="cafe-sizes">
+                    <span><strong>3.0 DT</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cafe-item">
+            <img src="image/supplement Champignon.jpg" alt="Champignons">
+            <div class="cafe-details">
+                <div class="cafe-header">
+                    <i class="fas fa-leaf"></i>
+                    <div class="cafe-name">Champignon</div>
+                </div>
+                <div class="cafe-sizes">
+                    <span><strong>3.0 DT</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cafe-item">
+            <img src="image/supplement Fruits de Mer.jpg" alt="Fruits de mer">
+            <div class="cafe-details">
+                <div class="cafe-header">
+                    <i class="fas fa-shrimp"></i>
+                    <div class="cafe-name">Fruits de Mer</div>
+                </div>
+                <div class="cafe-sizes">
+                    <span><strong>8.0 DT</strong></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="navigation">
+        <a href="index.html" class="nav-btn">
+            <i class="fas fa-arrow-left"></i>
+            <span>Menu Principal</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                Merci pour votre fidélité<br>
+                <span>Une expérience unique alliant saveurs authentiques et ambiance chaleureuse</span>
+            </div>
+
+            <div class="footer-phone">
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:+21654800666"><strong>54 800 666</strong></a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/16wF8U6Hn6/" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/thewolf.coffeeshop" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <div class="copyright">
+                © Lella Fatma - 2026
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
