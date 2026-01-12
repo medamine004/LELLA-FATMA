@@ -170,47 +170,108 @@
         .nav-btn.next:hover {
             background: #333;
         }
+.site-footer {
+    background-color: #0f0f0f;
+    color: #ccc;
+    padding: 80px 20px 50px;
+    border-top: 6px solid #E53935;
+}
 
-        /* Footer */
-        .site-footer {
-            background-color: #111;
-            color: #ddd;
-            padding: 80px 20px 60px;
-            text-align: center;
-            border-top: 6px solid #E53935;
-        }
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+}
 
-        .footer-content {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 35px;
-        }
+.footer-text {
+    text-align: center;
+}
 
-        .footer-text {
-            font-size: 1.3rem;
-            font-weight: 300;
-        }
+.thanks {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 12px;
+}
 
-        .footer-phone a {
-            color: #E53935;
-            text-decoration: none;
-            font-size: 2rem;
-            font-weight: 700;
-        }
+.slogan {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 620px;
+}
 
-        .social-links a {
-            color: #ccc;
-            font-size: 2.6rem;
-            margin: 0 14px;
-            transition: color 0.3s;
-        }
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
 
-        .social-links a:hover {
-            color: #E53935;
-        }
+.footer-phone {
+    text-align: center;
+}
+
+.footer-phone i {
+    font-size: 2.6rem;
+    color: #E53935;
+    margin-bottom: 14px;
+}
+
+.footer-phone a {
+    color: #ff5252;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-phone a:hover,
+.footer-phone a:focus {
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    gap: 35px;
+}
+
+.social-links a {
+    color: #aaa;
+    font-size: 3.2rem;
+    transition: all 0.35s ease;
+}
+
+.social-links a:hover {
+    color: #E53935;
+    transform: translateY(-6px) scale(1.15);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.95rem;
+    opacity: 0.75;
+}
+
+.legal-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.legal-links a:hover {
+    color: #E53935;
+}
+
+.separator {
+    color: #555;
+    margin: 0 8px;
+}
 
         @media (max-width: 768px) {
             .cafe-menu { grid-template-columns: 1fr; }
@@ -446,9 +507,9 @@
             </div>
 
             <div class="footer-phone">
-                <i class="fas fa-phone-alt"></i>
-                <a href="tel:+21654800666"><strong>54 800 666</strong></a>
-            </div>
+    <i class="fas fa-phone"></i>
+    <a href="tel:+21654800666">54 800 666</a>
+</div>
 
             <div class="social-links">
                 <a href="https://www.facebook.com/share/16wF8U6Hn6/" target="_blank">
