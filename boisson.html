@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boissons - The One Coffee</title>
+    <title>Boissons Gazeuses - The One Coffee</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -48,7 +48,7 @@
             border-radius: 3px;
         }
 
-        /* Hero Image - Taille raisonnable */
+        /* Hero Image */
         .hero-image-container {
             width: 100%;
             max-width: 700px;
@@ -132,10 +132,12 @@
             color: #111;
         }
 
+        /* === NOUVEAU STYLE POUR LES PRIX === */
         .cafe-sizes {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px 26px;
+            align-items: baseline;
+            gap: 0.7em 1.3em;
             font-size: 1.05rem;
             color: #444;
         }
@@ -144,10 +146,15 @@
             white-space: nowrap;
         }
 
-        .cafe-sizes strong {
+        .cafe-sizes .separator {
+            color: #bbb;
+            font-weight: 300;
+        }
+
+        .cafe-sizes .price {
             color: #E53935;
             font-weight: 700;
-            font-size: 1.18rem;
+            font-size: 1.15rem;
         }
 
         .navigation {
@@ -177,46 +184,107 @@
             transform: translateY(-4px);
         }
 
+        /* Footer */
         .site-footer {
-            background-color: #111;
-            color: #ddd;
-            padding: 80px 20px 60px;
-            text-align: center;
+            background-color: #0f0f0f;
+            color: #ccc;
+            padding: 80px 20px 50px;
             border-top: 6px solid #E53935;
         }
 
         .footer-content {
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 35px;
+            gap: 45px;
         }
 
-        .footer-text { font-size: 1.3rem; font-weight: 300; }
+        .footer-text {
+            text-align: center;
+        }
+
+        .thanks {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .slogan {
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 620px;
+        }
+
+        .footer-phone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .footer-phone i {
+            font-size: 2.6rem;
+            color: #E53935;
+            margin-bottom: 14px;
+        }
 
         .footer-phone a {
-            color: #E53935;
-            text-decoration: none;
-            font-size: 2rem;
+            color: #ff5252;
+            font-size: 2.4rem;
             font-weight: 700;
-        }
-
-        .social-links a {
-            color: #ccc;
-            font-size: 2.6rem;
-            margin: 0 14px;
+            text-decoration: none;
             transition: color 0.3s;
         }
 
-        .social-links a:hover { color: #E53935; }
+        .footer-phone a:hover,
+        .footer-phone a:focus {
+            color: #fff;
+        }
 
+        .social-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .social-links a {
+            color: #aaa;
+            font-size: 3.2rem;
+            transition: all 0.35s ease;
+        }
+
+        .social-links a:hover {
+            color: #E53935;
+            transform: translateY(-6px) scale(1.15);
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            opacity: 0.75;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .cafe-menu { grid-template-columns: 1fr; }
-            .cafe-item img { width: 70px; height: 70px; }
-            .cafe-name { font-size: 1.45rem; }
-            .cafe-sizes { gap: 10px 20px; font-size: 0.98rem; }
+            .cafe-menu { 
+                grid-template-columns: 1fr; 
+            }
+            .cafe-item img { 
+                width: 70px; 
+                height: 70px; 
+            }
+            .cafe-name { 
+                font-size: 1.45rem; 
+            }
+            .cafe-sizes { 
+                gap: 0.6em 1em; 
+                font-size: 0.98rem; 
+            }
             .hero-image-container {
                 max-width: 92%;
                 margin: 0 auto 30px;
@@ -225,64 +293,48 @@
                 height: 120px;
             }
         }
+
         @media (max-width: 480px) {
-
-    .logo-container img {
-        width: 180px;
-    }
-
-    .category-title {
-        font-size: 2.1rem;
-        margin: 15px 0 35px;
-    }
-
-    .hero-image {
-        height: 110px;
-    }
-
-    .cafe-menu {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 0 10px;
-    }
-
-    .cafe-item {
-        padding: 12px;
-        gap: 12px;
-    }
-
-    .cafe-item img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .cafe-name {
-        font-size: 1.2rem;
-    }
-
-    .cafe-sizes {
-        font-size: 1rem;
-    }
-
-    .nav-btn {
-        width: 100%;
-        justify-content: center;
-        padding: 14px;
-        font-size: 1.05rem;
-    }
-
-    .footer-text {
-        font-size: 1.05rem;
-    }
-
-    .footer-phone a {
-        font-size: 1.5rem;
-    }
-
-    .social-links a {
-        font-size: 2rem;
-    }
-}
+            .logo-container img {
+                width: 180px;
+            }
+            .category-title {
+                font-size: 2.1rem;
+            }
+            .hero-image {
+                height: 110px;
+            }
+            .cafe-menu {
+                gap: 16px;
+                padding: 0 10px;
+            }
+            .cafe-item {
+                padding: 12px;
+                gap: 12px;
+            }
+            .cafe-item img {
+                width: 60px;
+                height: 60px;
+            }
+            .cafe-name {
+                font-size: 1.2rem;
+            }
+            .nav-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 14px;
+                font-size: 1.05rem;
+            }
+            .thanks {
+                font-size: 1.4rem;
+            }
+            .footer-phone a {
+                font-size: 1.8rem;
+            }
+            .social-links a {
+                font-size: 2.4rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -300,27 +352,29 @@
     <div class="cafe-menu">
 
         <div class="cafe-item">
-            <img src="image/Eau gazeuse.jpg" alt="Boisson gazeuse 1L">
+            <img src="image/Eau gazeuse.jpg" alt="Eau gazeuse 1L">
             <div class="cafe-details">
                 <div class="cafe-header">
                     <i class="fas fa-glass-whiskey"></i>
                     <div class="cafe-name">Gazeux 1L</div>
                 </div>
                 <div class="cafe-sizes">
-                    <span>3.0 DT</span> / <span><strong>3.5 DT</strong></span>
+                    <span class="price">3.0 DT</span>
+                    <span class="separator">/</span>
+                    <span class="price">3.5 DT</span>
                 </div>
             </div>
         </div>
 
         <div class="cafe-item">
-            <img src="image/Eau gazeuse.jpg" alt="Boisson gazeuse 0.5L">
+            <img src="image/Eau gazeuse.jpg" alt="Eau gazeuse 0.5L">
             <div class="cafe-details">
                 <div class="cafe-header">
                     <i class="fas fa-glass-whiskey"></i>
                     <div class="cafe-name">Gazeux 0.5L</div>
                 </div>
                 <div class="cafe-sizes">
-                    <span><strong>2.0 DT</strong></span>
+                    <span class="price">2.0 DT</span>
                 </div>
             </div>
         </div>
@@ -333,7 +387,7 @@
                     <div class="cafe-name">Canette</div>
                 </div>
                 <div class="cafe-sizes">
-                    <span><strong>2.0 DT</strong></span>
+                    <span class="price">2.0 DT</span>
                 </div>
             </div>
         </div>
@@ -346,7 +400,7 @@
                     <div class="cafe-name">Canette 30cl</div>
                 </div>
                 <div class="cafe-sizes">
-                    <span><strong>1.5 DT</strong></span>
+                    <span class="price">1.5 DT</span>
                 </div>
             </div>
         </div>
@@ -364,25 +418,25 @@
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-text">
-                Merci pour votre fidélité<br>
-                <span>Une expérience unique alliant saveurs authentiques et ambiance chaleureuse</span>
+                <div class="thanks">Merci pour votre fidélité</div>
+                <div class="slogan">Une expérience unique alliant saveurs authentiques et ambiance chaleureuse</div>
             </div>
 
             <div class="footer-phone">
-                <i class="fas fa-phone-alt"></i>
-                <a href="tel:+21654800666"><strong>54 800 666</strong></a>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+21654800666">54 800 666</a>
             </div>
 
             <div class="social-links">
-                <a href="https://www.facebook.com/share/16wF8U6Hn6/" target="_blank">
+                <a href="https://www.facebook.com/share/16wF8U6Hn6/" target="_blank" aria-label="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com/thewolf.coffeeshop" target="_blank">
+                <a href="https://www.instagram.com/thewolf.coffeeshop" target="_blank" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
 
-            <div class="copyright">
+            <div class="footer-bottom">
                 © Lella Fatma - 2026
             </div>
         </div>
