@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Lella Fatma</title>
+    <title>Menu - The One Coffee</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -26,19 +26,18 @@
             font-size: clamp(14px, 3.5vw, 16px);
         }
 
-      .logo-container {
-        text-align: center;
-    padding: 40px 20px 65px;
-}
-
+        .logo-container {
+            text-align: center;
+            padding: 40px 20px 65px;
+        }
 
         .logo-container img {
-    width: 210px;
-    max-width: 78vw;
-    height: auto;
-    border-radius: 50%;
-    border: 5px solid #E53935;
-    object-fit: cover;
+            width: 210px;
+            max-width: 78vw;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid #E53935;
+            object-fit: cover;
         }
 
         .logo-subtitle {
@@ -91,7 +90,10 @@
             transition: all 0.28s ease;
         }
 
-     
+        .section-tab:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+        }
 
         .section-tab img {
             width: 100%;
@@ -100,7 +102,9 @@
             transition: transform 0.4s ease;
         }
 
-   
+        .section-tab:hover img {
+            transform: scale(1.08);
+        }
 
         .tab-content {
             position: absolute;
@@ -131,180 +135,112 @@
             line-height: 1.3;
         }
 
-     .site-footer {
-    background-color: #0f0f0f;
-    color: #ccc;
-    padding: 80px 20px 50px;
-    border-top: 6px solid #E53935;
-}
+        /* ================= FOOTER ================= */
+        .site-footer {
+            background-color: #0f0f0f;
+            color: #ccc;
+            padding: 80px 20px 50px;
+            border-top: 6px solid #E53935;
+        }
 
-.footer-content {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 45px;
-}
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
 
-.footer-text {
-    text-align: center;
-}
+        .footer-text {
+            text-align: center;
+        }
 
-.thanks {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 12px;
-}
+        .thanks {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+        }
 
-.slogan {
-    font-size: 1.25rem;
-    font-weight: 300;
-    line-height: 1.6;
-    opacity: 0.9;
-    max-width: 620px;
-}
+        .slogan {
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 680px;
+        }
 
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-}
+        /* Localisation + Carte statique */
+        .footer-location {
+            width: 100%;
+            max-width: 720px;
+            text-align: center;
+        }
 
-.footer-phone {
-    text-align: center;
-}
+        .footer-location h3 {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.9rem, 4.5vw, 2.4rem);
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
 
-.footer-phone i {
-    font-size: 2.6rem;
-    color: #E53935;
-    margin-bottom: 14px;
-}
+        .footer-location .address {
+            color: #ddd;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            opacity: 0.92;
+        }
 
-.footer-phone a {
-    color: #ff5252;
-    font-size: 2.4rem;
-    font-weight: 700;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+        .map-static {
+            width: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+            margin: 15px 0 25px;
+        }
 
-.footer-phone a:hover,
-.footer-phone a:focus {
-    color: #fff;
-}
+        .map-link {
+            display: inline-block;
+            color: #ff5252;
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.35s ease;
+        }
 
-.social-links {
-    display: flex;
-    gap: 35px;
-}
+        .map-link:hover,
+        .map-link:focus {
+            color: white;
+            transform: translateX(10px);
+        }
 
-.social-links a {
-    color: #aaa;
-    font-size: 3.2rem;
-    transition: all 0.35s ease;
-}
+        .footer-bottom {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
 
-.social-links a:hover {
-    color: #E53935;
-    transform: translateY(-6px) scale(1.15);
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 0.95rem;
-    opacity: 0.75;
-}
-
-.legal-links a {
-    color: #aaa;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.legal-links a:hover {
-    color: #E53935;
-}
-
-.separator {
-    color: #555;
-    margin: 0 8px;
-}
         /* Responsive */
         @media (max-width: 768px) {
-            .menu-title { font-size: 3.8rem; }
-            .section-tabs { gap: 30px; padding: 0 20px 90px; }
-            .section-tab { height: 220px; border-width: 5px; }
-            .tab-content i { font-size: 3rem; }
-            .tab-content div { font-size: 2.1rem; }
-            .logo-container img { width: 300px; }
+            .section-tabs { gap: 30px; padding-bottom: 90px; }
+            .section-tab { height: 240px; border-width: 5px; }
+            .map-static { max-height: 300px; }
         }
 
         @media (max-width: 480px) {
-            .menu-title { font-size: 3rem; }
-            .section-tab { height: 190px; }
-            .tab-content i { font-size: 2.6rem; }
-            .tab-content div { font-size: 1.8rem; }
-            .logo-subtitle { font-size: 1.1rem; }
+            .logo-container { padding: 35px 15px 50px; }
+            .logo-container img { width: 180px; }
+            .menu-title { font-size: 3.2rem; margin: 30px 0 50px; }
+            .section-tab { height: 200px; }
+            .map-static { max-height: 260px; }
+            .thanks { font-size: 1.6rem; }
+            .slogan { font-size: 1.1rem; }
         }
-        @media (max-width: 360px) {
-
-    html { font-size: 13px; }
-
-    .logo-container {
-        padding: 35px 15px 45px;
-    }
-
-    .logo-container img {
-        width: 240px;
-    }
-
-    .menu-title {
-        font-size: 2.4rem;
-        margin: 25px 0 45px;
-    }
-
-    .menu-title::after {
-        width: 90px;
-        height: 4px;
-    }
-
-    .section-tabs {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        padding: 0 12px 70px;
-    }
-
-    .section-tab {
-        height: 160px;
-        border-width: 4px;
-    }
-
-    .tab-content i {
-        font-size: 2.2rem;
-    }
-
-    .tab-content div {
-        font-size: 1.5rem;
-        letter-spacing: 1px;
-    }
-
-    .footer-text {
-        font-size: 1.05rem;
-    }
-
-    .footer-phone a {
-        font-size: 1.5rem;
-    }
-
-    .social-links a {
-        font-size: 2rem;
-    }
-}
-
     </style>
 </head>
 <body>
@@ -312,7 +248,7 @@
     <div class="logo-container">
         <img src="image/lella fatma.jpg" alt="Logo The One Coffee">
         <p class="logo-subtitle">
-            lella Fatma, chaque plat est une pépite.<br>
+            Lella Fatma, chaque plat est une pépite.<br>
             Une cuisine méditerranéenne sublimée, des ingrédients d’exception,<br>
             et une atmosphère élégante où l’on savoure l’instant.
         </p>
@@ -321,94 +257,108 @@
     <h1 class="menu-title">Menu</h1>
 
     <div class="section-tabs">
+        <a href="pizza.html" class="section-tab">
+            <img src="image/pizza chef.jpg" alt="Pizza artisanale">
+            <div class="tab-content">
+                <i class="fas fa-pizza-slice"></i>
+                <div>PIZZA</div>
+            </div>
+        </a>
 
-    <a href="pizza.html" class="section-tab">
-        <img src="image/pizza chef.jpg" alt="Pizza artisanale">
-        <div class="tab-content">
-            <i class="fas fa-pizza-slice"></i>
-            <div>PIZZA</div>
-        </div>
-    </a>
+        <a href="makloub.html" class="section-tab">
+            <img src="image/Makloub Escalope.jpg" alt="Makloub traditionnel">
+            <div class="tab-content">
+                <i class="fas fa-utensils"></i>
+                <div>MAKLOUB</div>
+            </div>
+        </a>
 
-    <a href="makloub.html" class="section-tab">
-        <img src="image/Makloub Escalope.jpg" alt="Makloub traditionnel">
-        <div class="tab-content">
-            <i class="fas fa-utensils"></i>
-            <div>MAKLOUB</div>
-        </div>
-    </a>
+        <a href="baguette farcie.html" class="section-tab">
+            <img src="image/bageutee chawarma.jpg" alt="Baguette farcie">
+            <div class="tab-content">
+                <i class="fas fa-bread-slice"></i>
+                <div>BAGUETTE FARCIE</div>
+            </div>
+        </a>
 
-    <a href="baguette farcie.html" class="section-tab">
-        <img src="image/bageutee chawarma.jpg" alt="Baguette farcie">
-        <div class="tab-content">
-            <i class="fas fa-bread-slice"></i>
-            <div>BAGUETTE FARCIE</div>
-        </div>
-    </a>
+        <a href="sandwich.html" class="section-tab">
+            <img src="image/sandwish Mahbouli escalope.jpg" alt="Sandwichs variés">
+            <div class="tab-content">
+                <i class="fas fa-hamburger"></i>
+                <div>SANDWICH</div>
+            </div>
+        </a>
 
-    <a href="sandwich.html" class="section-tab">
-        <img src="image/sandwish Mahbouli escalope.jpg" alt="Sandwichs variés">
-        <div class="tab-content">
-            <i class="fas fa-hamburger"></i>
-            <div>SANDWICH</div>
-        </div>
-    </a>
+        <a href="roti.html" class="section-tab">
+            <img src="image/roti.jpg" alt="Rôti et grillades">
+            <div class="tab-content">
+                <i class="fas fa-drumstick-bite"></i>
+                <div>ROTI</div>
+            </div>
+        </a>
 
-    <a href="roti.html" class="section-tab">
-        <img src="image/roti.jpg" alt="Rôti et grillades">
-        <div class="tab-content">
-            <i class="fas fa-drumstick-bite"></i>
-            <div>ROTI</div>
-        </div>
-    </a>
+        <a href="plats.html" class="section-tab">
+            <img src="image/Plat Sauce blanche.jpg" alt="Plats chauds maison">
+            <div class="tab-content">
+                <i class="fas fa-utensils"></i>
+                <div>PLATS</div>
+            </div>
+        </a>
 
-    <a href="plats.html" class="section-tab">
-        <img src="image/Plat Sauce blanche.jpg" alt="Plats chauds maison">
-        <div class="tab-content">
-            <i class="fas fa-utensils"></i>
-            <div>PLATS</div>
-        </div>
-    </a>
+        <a href="Supplement.html" class="section-tab">
+            <img src="image/supplement Fruits de Mer.jpg" alt="Suppléments et accompagnements">
+            <div class="tab-content">
+                <i class="fas fa-plus-circle"></i>
+                <div>SUPPLÉMENT</div>
+            </div>
+        </a>
 
-    <a href="Supplement.html" class="section-tab">
-        <img src="image/supplement Fruits de Mer.jpg" alt="Suppléments et accompagnements">
-        <div class="tab-content">
-            <i class="fas fa-plus-circle"></i>
-            <div>Supplément</div>
-        </div>
-    </a>
+        <a href="boisson.html" class="section-tab">
+            <img src="image/boisson.jpg" alt="Boissons fraîches et chaudes">
+            <div class="tab-content">
+                <i class="fas fa-mug-hot"></i>
+                <div>BOISSONS</div>
+            </div>
+        </a>
+    </div>
 
-    <a href="boisson.html" class="section-tab">
-        <img src="image/boisson.jpg" alt="Boissons fraîches et chaudes">
-        <div class="tab-content">
-            <i class="fas fa-mug-hot"></i>
-            <div>BOISSONS</div>
-        </div>
-    </a>
-
-</div>
-
+    <!-- FOOTER avec carte statique -->
     <footer class="site-footer">
         <div class="footer-content">
+
             <div class="footer-text">
-                Merci pour votre fidélité<br>
-                <span>Une expérience unique alliant saveurs authentiques et ambiance chaleureuse</span>
-            </div>
-<div class="footer-phone">
-    <i class="fas fa-phone"></i>
-    <a href="tel:+21654800666">54 800 666</a>
-</div>
-
-            <div class="social-links">
-                <a href="https://www.facebook.com/profile.php?id=100063944715824" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/cafe__andalous/" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram"></i>
-                </a>
+                <div class="thanks">Merci pour votre fidélité</div>
+                <div class="slogan">
+                    Une expérience unique alliant saveurs authentiques et ambiance chaleureuse
+                </div>
             </div>
 
-            <div class="copyright">© Lella fatma</div>
+            <div class="footer-location">
+                <h3>Nous trouver</h3>
+                <div class="address">
+                    Route Régionale El Haouaria - RN1<br>
+                    Takelsa, Tunisie
+                </div>
+
+                <!-- Carte statique (remplace l'iframe) -->
+                <img 
+                    class="map-static"
+                    src="image/maps.jpeg"
+                    alt="Localisation Lella Fatma - Takelsa"
+                    loading="lazy"
+                >
+
+                <a href="https://www.openstreetmap.org/?mlat=36.811089&mlon=10.659514#map=15/36.811089/10.659514"
+                   target="_blank"
+                   class="map-link">
+                    Voir la carte plus grande →
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Lella Fatma - Tous droits réservés
+            </div>
+
         </div>
     </footer>
 
