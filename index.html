@@ -218,6 +218,24 @@
             transform: translateX(10px);
         }
 
+        /* Social links */
+        .social-links {
+            display: flex;
+            gap: 25px;
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: #E53935;
+            font-size: 2.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: white;
+            transform: translateY(-4px);
+        }
+
         .footer-bottom {
             margin-top: 30px;
             text-align: center;
@@ -240,6 +258,8 @@
             .map-static { max-height: 260px; }
             .thanks { font-size: 1.6rem; }
             .slogan { font-size: 1.1rem; }
+            .social-links { gap: 20px; }
+            .social-links a { font-size: 2rem; }
         }
     </style>
 </head>
@@ -322,7 +342,7 @@
         </a>
     </div>
 
-    <!-- FOOTER avec carte statique -->
+    <!-- FOOTER avec carte statique + lien Facebook -->
     <footer class="site-footer">
         <div class="footer-content">
 
@@ -340,7 +360,6 @@
                     Takelsa, Tunisie
                 </div>
 
-                <!-- Carte statique (remplace l'iframe) -->
                 <img 
                     class="map-static"
                     src="image/maps.jpeg"
@@ -353,6 +372,15 @@
                    class="map-link">
                     Voir la carte plus grande →
                 </a>
+            </div>
+
+            <!-- Ajout des réseaux sociaux -->
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1CA2k8y9HG/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" title="Suivez-nous sur Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <!-- Remplace le lien ci-dessus par le vrai lien de la page Facebook quand tu l'auras -->
+                <!-- Exemple : https://www.facebook.com/LellaFatmaTakelsa  ou https://www.facebook.com/TheOneCoffeeTakelsa -->
             </div>
 
             <div class="footer-bottom">
